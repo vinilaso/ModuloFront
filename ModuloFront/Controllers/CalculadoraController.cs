@@ -27,35 +27,15 @@ namespace ModuloFront.Controllers
         [HttpGet("Calcular")]
         public IActionResult Calcular()
         {
-            double retorno = 0;
+            try
             {
-                try {
-                    switch (_calculadora.OperacaoAtual[0])
-                    {
-                        case '+':
-                            retorno = _calculadora.Somar();
-                            break;
-
-                        case '-':
-                            retorno = _calculadora.Subtrair();
-                            break;
-                        case '*':
-                            retorno = _calculadora.Multiplicar();
-                            break;
-                        case '/':
-                            retorno = _calculadora.Dividir();
-                            break;
-                        default:
-                            return Ok("Valores inválidos!");
-                            break;
-                    }
-                }
-                catch (CalculadoException ex)
-                {
-                    return NotFound(ex.Message);
-                }
-                return Ok(retorno);
+                return Ok(_calculadora.Calcular());
+            } 
+            catch(Exception ex) when (ex is CalculadoException || ex is FormatException)
+            {
+                return NotFound(ex.Message);
             }
+            
         }
         
     }

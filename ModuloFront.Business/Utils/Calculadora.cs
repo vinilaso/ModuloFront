@@ -12,6 +12,32 @@ namespace ModuloFront.Business.Utils
         public string OperacaoAtual { get; set; } = "";
         public bool Calculado { get; set; } = false;
 
+        public double Calcular()
+        {
+            double retorno = 0;
+            {
+                switch (OperacaoAtual[0])
+                {
+                    case '+':
+                        retorno = Somar();
+                        break;
+                    case '-':
+                        retorno = Subtrair();
+                        break;
+                    case '*':
+                        retorno = Multiplicar();
+                        break;
+                    case '/':
+                        retorno = Dividir();
+                        break;
+                    default:
+                        throw new FormatException("Valor informado inválido!");
+                        break;
+                }
+                return retorno;
+            }
+        }
+
         public double Somar()
         {
             if (Calculado)
@@ -20,7 +46,7 @@ namespace ModuloFront.Business.Utils
             }
 
             double resultado = 0;
-            foreach(int valor in ValoresAtuais)
+            foreach (int valor in ValoresAtuais)
             {
                 resultado += valor;
             }
@@ -37,7 +63,7 @@ namespace ModuloFront.Business.Utils
             }
 
             double resultado = ValoresAtuais[0];
-            for(int i = 1; i < ValoresAtuais.Count; i++)
+            for (int i = 1; i < ValoresAtuais.Count; i++)
             {
                 resultado -= ValoresAtuais[i];
             }
@@ -70,7 +96,7 @@ namespace ModuloFront.Business.Utils
             }
 
             double resultado = ValoresAtuais[0];
-            for(int i = 1; i < ValoresAtuais.Count; i++)
+            for (int i = 1; i < ValoresAtuais.Count; i++)
             {
                 resultado /= ValoresAtuais[i];
             }
