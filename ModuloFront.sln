@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloFront", "ModuloFront\ModuloFront.csproj", "{317E6636-1C1B-4FFA-8CF6-5B25E780FBB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloFront.Business", "ModuloFront.Business\ModuloFront.Business.csproj", "{34AE485D-6D1C-4AE9-9E3E-364ACD30BE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{317E6636-1C1B-4FFA-8CF6-5B25E780FBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317E6636-1C1B-4FFA-8CF6-5B25E780FBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317E6636-1C1B-4FFA-8CF6-5B25E780FBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317E6636-1C1B-4FFA-8CF6-5B25E780FBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34AE485D-6D1C-4AE9-9E3E-364ACD30BE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34AE485D-6D1C-4AE9-9E3E-364ACD30BE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34AE485D-6D1C-4AE9-9E3E-364ACD30BE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34AE485D-6D1C-4AE9-9E3E-364ACD30BE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EE64253-8513-4A33-B6E0-0018D5DE7831}
+	EndGlobalSection
+EndGlobal
